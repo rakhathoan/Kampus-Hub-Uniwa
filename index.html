@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KampusHub - Nama Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-layout">
+        <p class="brand">KampusHub</p>
+        <nav aria-label="Navigasi utama">
+          <a href="#daftar-pengumuman">Pengumuman</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro" aria-labelledby="judul-halaman">
+        <p class="eyebrow">Universitas Wahidiyah</p>
+        <h1 id="judul-halaman">Papan Pengumuman KampusHub</h1>
+        <p>
+          Informasi terbaru seputar kegiatan akademik, layanan kampus, dan
+          kesempatan mahasiswa tahun ajaran 2026/2027.
+        </p>
+
+        <form action="#" method="get" class="search-form">
+          <label for="q">Cari pengumuman</label>
+          <input
+            type="search"
+            id="q"
+            name="q"
+            placeholder="Contoh: ujian, beasiswa, perpustakaan"
+          />
+        </form>
+      </section>
+
+      <section aria-labelledby="judul-daftar">
+        <h2 id="judul-daftar" class="section-title">Pengumuman Terbaru</h2>
+
+        <div id="daftar-pengumuman">
+          <article data-category="akademik">
+            <h2>UTS Pemrograman Web minggu 8</h2>
+            <p>
+              Ujian dilaksanakan di laboratorium komputer. Mahasiswa wajib
+              membawa laptop dan kartu tanda mahasiswa.
+            </p>
+            <p>
+              <time datetime="2026-10-19">19 Oktober 2026</time> - akademik
+            </p>
+          </article>
+
+          <article data-category="beasiswa">
+            <h2>Pendaftaran beasiswa prestasi dibuka</h2>
+            <p>
+              Mahasiswa aktif dapat mengumpulkan transkrip nilai, surat
+              rekomendasi, dan portofolio kegiatan melalui bagian kemahasiswaan.
+            </p>
+            <p>
+              <time datetime="2026-09-18">18 September 2026</time> - beasiswa
+            </p>
+          </article>
+
+          <article data-category="layanan">
+            <h2>Jam buka perpustakaan diperpanjang</h2>
+            <p>
+              Perpustakaan kampus buka sampai pukul 20.00 selama masa persiapan
+              ujian tengah semester.
+            </p>
+            <p>
+              <time datetime="2026-10-05">5 Oktober 2026</time> - layanan
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tentang" class="info-section">
+        <h2>Tentang halaman</h2>
+        <p>
+          Halaman ini dibuat sebagai latihan struktur HTML semantik dan CSS
+          responsif untuk praktikum Pemrograman Web.
+        </p>
+      </section>
+    </main>
+
+    <footer id="kontak">
+      <div class="container">
+        <p>Nama Mahasiswa / NIM - KampusHub 2026/2027</p>
+      </div>
+    </footer>
+  </body>
+</html>
