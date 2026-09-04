@@ -2,4 +2,4 @@
 
 Tanggal: 4 September 2026
 
-AI digunakan untuk membantu menyusun struktur halaman, menulis contoh isi pengumuman, membuat CSS responsif, dan menyiapkan README. Identitas mahasiswa masih memakai placeholder karena nama dan NIM belum diberikan.
+AI digunakan untuk membantu menyusun struktur halaman, menyesuaikan warna dengan flyer Universitas Wahidiyah, menambahkan logo kampus, membuat CSS responsif, dan menyiapkan README.

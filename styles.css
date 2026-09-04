@@ -8,8 +8,8 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #262626;
-  background: #f4f1ea;
+  color: #241313;
+  background: #f8d150;
 }
 
 .container {
@@ -19,9 +19,10 @@ body {
 }
 
 header {
-  background: #263238;
+  background: #811828;
   color: #fff;
-  border-bottom: 4px solid #2f7d79;
+  border-bottom: 5px solid #f3c72f;
+  box-shadow: 0 4px 18px rgba(82, 11, 25, 0.22);
 }
 
 .header-layout {
@@ -33,9 +34,20 @@ header {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   margin: 0;
+  color: #fff;
   font-size: 1.35rem;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
 }
 
 nav {
@@ -48,24 +60,28 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  padding-bottom: 0.15rem;
 }
 
 nav a:hover,
 nav a:focus {
-  text-decoration: underline;
+  color: #f3c72f;
+  text-decoration: none;
 }
 
 main {
-  padding: 2rem 0;
+  padding: 2.2rem 0;
 }
 
 .intro {
   margin-bottom: 2rem;
+  padding: 1.4rem 0 1.6rem;
+  border-bottom: 3px solid rgba(129, 24, 40, 0.25);
 }
 
 .eyebrow {
   margin: 0 0 0.25rem;
-  color: #2f7d79;
+  color: #811828;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -74,6 +90,7 @@ h1 {
   margin: 0 0 0.75rem;
   font-size: 2rem;
   line-height: 1.2;
+  color: #811828;
 }
 
 .intro p {
@@ -94,14 +111,16 @@ h1 {
 .search-form input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #bbb4aa;
+  border: 2px solid #811828;
   border-radius: 4px;
   font: inherit;
+  background: #fff7dd;
 }
 
 .section-title {
   margin: 0 0 1rem;
   font-size: 1.4rem;
+  color: #811828;
 }
 
 #daftar-pengumuman {
@@ -113,13 +132,15 @@ h1 {
 article {
   padding: 0.9rem 1rem;
   border: 1px solid #d8d4cc;
-  background: #fff;
+  border-left: 6px solid #079447;
+  background: #fff7dd;
+  box-shadow: 0 2px 10px rgba(82, 11, 25, 0.08);
 }
 
 article h2 {
   margin: 0 0 0.4rem;
   font-size: 1.2rem;
-  color: #263238;
+  color: #811828;
 }
 
 article p {
@@ -128,16 +149,20 @@ article p {
 
 time {
   font-weight: 700;
+  color: #079447;
 }
 
 .info-section {
   margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 3px solid rgba(129, 24, 40, 0.25);
 }
 
 footer {
   padding: 1rem 0;
   color: #fff;
-  background: #263238;
+  background: #811828;
+  border-top: 5px solid #f3c72f;
 }
 
 footer p {
@@ -148,6 +173,11 @@ footer p {
   .header-layout {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
   }
 
   h1 {
