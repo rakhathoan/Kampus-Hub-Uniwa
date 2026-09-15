@@ -117,10 +117,79 @@ h1 {
   background: #fff7dd;
 }
 
+.search-results {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #811828;
+  background: #fff7dd;
+}
+
+.search-results li {
+  border-bottom: 1px solid #d8d4cc;
+}
+
+.search-results li:last-child {
+  border-bottom: 0;
+}
+
+.search-results button {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 0;
+  color: #241313;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.search-results button:hover,
+.search-results button:focus {
+  color: #fff;
+  background: #811828;
+}
+
 .section-title {
   margin: 0 0 1rem;
   font-size: 1.4rem;
   color: #811828;
+}
+
+.nilai-section {
+  margin-bottom: 2rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #d8d4cc;
+  background: #fff7dd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #d8d4cc;
+}
+
+th {
+  color: #fff;
+  background: #811828;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+tbody tr:nth-child(even) {
+  background: #fff;
 }
 
 #daftar-pengumuman {
