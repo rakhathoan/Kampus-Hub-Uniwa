@@ -319,6 +319,10 @@ footer p {
     flex-direction: column;
   }
 
+  .container {
+    min-width: 75rem;
+  }
+
   .brand img {
     width: 48px;
     height: 48px;
