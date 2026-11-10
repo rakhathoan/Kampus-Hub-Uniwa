@@ -16,10 +16,9 @@ const beritaUniwa = [
 ];
 
 function pathSaatIni() {
-  const path = window.location.pathname.replace(/\/+$/, "");
-  const detail = path.match(/^\/berita\/(\d+)$/);
+  const detail = window.location.pathname.match(/^\/berita\/(\d+)$/);
   if (detail) return { nama: "detail", id: detail[1] };
-  if (path.startsWith("/berita") && path.length > "/berita".length) return { nama: "berita" };
+  if (window.location.pathname === "/berita") return { nama: "berita" };
   return { nama: "dashboard" };
 }
 
@@ -32,8 +31,8 @@ function Dashboard() {
   const [mahasiswaDipilih, setMahasiswaDipilih] = useState(null);
   const hasilPencarian = useMemo(() => {
     const kueri = kataKunci.trim().toLowerCase();
-    return kueri ? dataNilaiMahasiswa.filter((mahasiswa) => mahasiswa.nama.toLowerCase().includes(kueri)) : [];
-  }, []);
+    return kueri ? dataNilaiMahasiswa.filter(({ nama }) => nama.toLowerCase().includes(kueri)) : [];
+  }, [kataKunci]);
   const dataTabel = mahasiswaDipilih ? [mahasiswaDipilih] : dataNilaiMahasiswa;
   function pilihMahasiswa(mahasiswa) { setKataKunci(mahasiswa.nama); setMahasiswaDipilih(mahasiswa); document.querySelector("#data-nilai")?.scrollIntoView({ behavior: "smooth" }); }
   return <main className="container">
@@ -60,6 +59,6 @@ export default function App() {
   const [route, setRoute] = useState(pathSaatIni);
   useEffect(() => { const sinkronkanPath = () => setRoute(pathSaatIni()); window.addEventListener("popstate", sinkronkanPath); return () => window.removeEventListener("popstate", sinkronkanPath); }, []);
   function navigasiKe(tujuan) { if (tujuan === window.location.pathname) return; window.history.pushState({}, "", tujuan); setRoute(pathSaatIni()); window.scrollTo({ top: 0, behavior: "smooth" }); }
-  const halaman = route.nama === "berita" ? <Berita onNavigate={(tujuan) => navigasiKe(tujuan.split("/").slice(0, 2).join("/"))} /> : route.nama === "detail" ? <DetailBerita id={route.id} onNavigate={navigasiKe} /> : <Dashboard />;
+  const halaman = route.nama === "berita" ? <Berita onNavigate={navigasiKe} /> : route.nama === "detail" ? <DetailBerita id={route.id} onNavigate={navigasiKe} /> : <Dashboard />;
   return <><header><div className="container header-layout"><a className="brand" href="/" onClick={(event) => { event.preventDefault(); navigasiKe("/"); }} aria-label="Beranda KampusHub"><img src={logoUniwa} alt="Logo Universitas Wahidiyah" /><span>UNIVERSITAS WAHIDIYAH</span></a><nav aria-label="Navigasi utama"><NavLink href="/" aktif={route.nama === "dashboard"} onNavigate={navigasiKe}>Dashboard</NavLink><NavLink href="/berita" aktif={route.nama === "berita" || route.nama === "detail"} onNavigate={navigasiKe}>Berita</NavLink></nav></div></header>{halaman}<footer><div className="container"><p>Rakha Maulana Raditya / 20232210157 - UNIVERSITAS WAHIDIYAH 2026/2027</p></div></footer></>;
 }

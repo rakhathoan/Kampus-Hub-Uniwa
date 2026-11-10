@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: min(100% - 2rem, 960px);
+  width: min(calc(100% - 2rem), 960px);
   max-width: 960px;
   margin: 0 auto;
 }
@@ -314,21 +314,46 @@ footer p {
 }
 
 @media (max-width: 520px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header-layout {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .container {
-    min-width: 75rem;
+    padding: 0.8rem 0;
   }
 
   .brand img {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  nav {
+    width: 100%;
+    gap: 0.8rem;
   }
 
   h1 {
     font-size: 1.65rem;
+  }
+
+  main {
+    padding: 1.5rem 0;
+  }
+
+  article {
+    padding: 0.85rem;
+  }
+
+  article h2,
+  article h3,
+  article p,
+  .intro p {
+    overflow-wrap: anywhere;
   }
 }
