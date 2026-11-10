@@ -33,6 +33,7 @@ Dashboard dan halaman Berita memakai data dummy yang sama, berisi 10 pengumuman 
 | Navigasi SPA | Dashboard dan Berita memiliki URL berbeda; Back/Forward menyelaraskan isi halaman. |
 | Layar kecil | Layout header membungkus menu pada lebar kecil, tabel dapat digeser horizontal. |
 | Tantangan tambahan | Pencarian judul, filter penulis, dan detail berita tersedia. |
+| Audit dependency | `npm audit --omit=dev` selesai tanpa kerentanan. |
 
 ## Bukti tampilan
 
